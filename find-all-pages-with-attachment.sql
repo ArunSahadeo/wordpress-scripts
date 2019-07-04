@@ -10,7 +10,6 @@ SET @stmt_two = CONCAT('WHERE attachment.post_type = "attachment" AND attachment
 SET @stmt_three = CONCAT('ORDER BY attachment.id ASC');
 
 SET @sql = CONCAT(@stmt_one, @stmt_two, @stmt_three);
-SELECT @sql;
 
 PREPARE stmt from @sql;
 EXECUTE stmt;
